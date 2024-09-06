@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Insight Analyzer - Contact Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Loan Insight Analyzer</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="schemes.html">Schemes</a></li>
+                <li><a href="eligibility.html">Eligibility</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Support</h2>
+        <p>If you have any questions or need assistance, feel free to reach out to us through the form below or contact us via phone or email.</p>
+
+        <form action="submit_contact.html" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <section class="contact-info">
+            <h3>Other Ways to Contact Us</h3>
+            <p><strong>Phone:</strong> +91 1234 567 890</p>
+            <p><strong>Email:</strong> support@loaninsight.com</p>
+            <p><strong>Office Address:</strong> 123 Financial Street, New Delhi, India</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loan Insight Analyzer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

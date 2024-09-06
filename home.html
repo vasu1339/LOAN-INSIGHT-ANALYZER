@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Insight Analyzer - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Loan Insight Analyzer</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="schemes.html">Schemes</a></li>
+                <li><a href="eligibility.html">Eligibility</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to Loan Insight Analyzer</h2>
+            <p>Your trusted platform to explore and apply for government loan schemes.</p>
+        </section>
+
+        <section class="schemes-overview">
+            <h3>Popular Government Schemes</h3>
+            <div class="schemes-grid">
+                <div class="scheme">
+                    <h4>Pradhan Mantri Awas Yojana</h4>
+                    <p>Affordable housing scheme for all.</p>
+                    <a href="scheme-details.html">Learn More</a>
+                </div>
+                <div class="scheme">
+                    <h4>Startup India</h4>
+                    <p>Support for new startups.</p>
+                    <a href="scheme-details.html">Learn More</a>
+                </div>
+                <div class="scheme">
+                    <h4>Atmanirbhar Bharat</h4>
+                    <p>Self-reliant India mission.</p>
+                    <a href="scheme-details.html">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="eligibility-check">
+            <h3>Quick Eligibility Check</h3>
+            <form action="eligibility.html" method="POST">
+                <label for="income">Annual Income:</label>
+                <input type="number" id="income" name="income" required>
+
+                <label for="credit-score">Credit Score:</label>
+                <input type="number" id="credit-score" name="credit-score" required>
+
+                <button type="submit">Check Eligibility</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Loan Insight Analyzer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
