@@ -18,7 +18,7 @@ applicant_income = st.number_input('Applicant Income', 0, 1000000)
 coapplicant_income = st.number_input('Coapplicant Income', 0, 1000000)
 loan_amount = st.number_input('Loan Amount', 0, 1000000)
 loan_amount_term = st.slider('Loan Amount Term (in months)', 0, 480)
-credit_history = st.slider('Credit History (0: No History, 1: Good History)', 0, 1)
+credit_history = st.selectbox('Credit History', ['Good History', 'Bad History' , 'No History'])  # Changed to selectbox
 property_area = st.selectbox('Property Area', ['Urban', 'Semiurban', 'Rural'])
 
 # Converting categorical variables into numerical form for prediction
@@ -42,6 +42,11 @@ if self_employed == 'Yes':
 else:
     self_employed = 0
 
+if credit_history == 'Good History':
+    credit_history = 1
+else:
+    credit_history = 0
+
 if property_area == 'Urban':
     property_area = 2
 elif property_area == 'Semiurban':
@@ -53,7 +58,7 @@ else:
 if st.button("Predict Loan Approval"):
     input_data = pd.DataFrame([[gender, married, dependents, education, self_employed,
                                 applicant_income, coapplicant_income, loan_amount, loan_amount_term,
-                                credit_history, property_area]], 
+                                credit_history, property_area]],
                               columns=['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 
                                        'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 
                                        'Credit_History', 'Property_Area'])
@@ -65,3 +70,4 @@ if st.button("Predict Loan Approval"):
         st.markdown('Loan is **Approved**')
     else:
         st.markdown('Loan is **Rejected**')
+
